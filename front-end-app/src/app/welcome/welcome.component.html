@@ -1,0 +1,28 @@
+<h1>Welcome!</h1>
+<div class="container">
+    Mr {{name}} {{message}}
+
+
+    You can manage your todos :<a routerLink="/todos"> here</a>
+</div>
+
+
+<div class="container">
+
+
+    click here to get customer messaged from backend server : <button (click)="getWelcomeMessage()"
+        class="btn btn-success">Get Message</button>
+</div>
+
+
+<div class="container" *ngIf="messageFromBackend">
+
+
+   <h2> Your message from the backend is : {{messageFromBackend}}</h2>
+ </div>
+
+ <div class="container" *ngIf="errorMessage">
+
+
+    <h2> Something went wrong becasuse of : {{errorMessage}}</h2>
+  </div>
